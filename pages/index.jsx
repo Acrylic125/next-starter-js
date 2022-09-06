@@ -1,6 +1,7 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -8,8 +9,8 @@ export default function Home() {
   console.log(user?.sub);
   return (
     <div className={styles.container}>
-      <a href="/api/auth/login">Login</a>
-      <a href="/api/auth/logout">Logout</a>
+      <Link href="/api/auth/login">Login</Link>
+      <Link href="/api/auth/logout">Log Out</Link>
       <p>Name: {user?.name}</p>
     </div>
   );
