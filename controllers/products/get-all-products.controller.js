@@ -1,4 +1,4 @@
-import getAllProducts from "../../services/products/gett-all-products.service";
+import getAllProducts from "../../services/products/get-all-products.service";
 import * as yup from "yup";
 import ParamError from "../../errors/data/ParamError";
 

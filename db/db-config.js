@@ -1,14 +1,14 @@
-import { z } from "zod";
+import * as yup from "yup";
 
-const DBConfigSchema = z.object({
-  host: z.string(),
-  port: z.number(),
-  user: z.string(),
-  password: z.string(),
-  database: z.string(),
+const DBConfigSchema = yup.object().shape({
+  host: yup.string().required(),
+  port: yup.number().integer().required(),
+  user: yup.string().required(),
+  password: yup.string().required(),
+  database: yup.string().required(),
 });
 
-const DBConfig = DBConfigSchema.parse({
+const DBConfig = DBConfigSchema.cast({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   user: process.env.DB_USER,
