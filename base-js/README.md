@@ -19,6 +19,7 @@ As a start, this project is a bare bones shopping app to demonstrate how to use 
 1. COPY and name `sample.env.local` to `.env.local` and update the values to match your environment.
 1. Run `npm run dev` to start the development server.
 1. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. To try out the endpoints on postman, refer to https://github.com/Acrylic125/nextjs-starter/wiki/Auth0-Postman-Setup-Guide to setup postman.
 
 ## Removing Starter Code
 
@@ -29,11 +30,6 @@ As mentioned above, this project is a bare bones shopping app to demonstrate how
 1. Delete the `controllers/products` folder.
 1. Delete the `api/products` folder.
 1. Delete the `pages/api/products.js` file.
-
-### References
-
-- https://www.youtube.com/watch?v=3yfHIVWddqk&t=206s
-- https://community.auth0.com/t/test-postman-and-nextjs-secure-api-endpoints/67315/7
 
 ## Deployment
 
