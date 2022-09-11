@@ -26,10 +26,10 @@ As a start, this project is a bare bones shopping app to demonstrate how to use 
 As mentioned above, this project is a bare bones shopping app to demonstrate how to use NextJS. To remove the starter code, follow these steps:
 
 1. Delete the `shop.sql` folder.
-1. Delete the `services/products` folder.
-1. Delete the `controllers/products` folder.
-1. Delete the `api/products` folder.
-1. Delete the `pages/api/products.js` file.
+1. Delete the `services/products.ts` file.
+1. Delete the `controllers/products.ts` file.
+1. Delete the `api/products-api.ts` file.
+1. Delete the `pages/api/products.ts` file.
 
 ## Deployment
 
