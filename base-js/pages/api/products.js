@@ -1,6 +1,5 @@
 import { withApiAuthRequired } from "@auth0/nextjs-auth0";
-import handleCreateProduct from "../../controllers/products/create-product.controller";
-import handleGetAllProducts from "../../controllers/products/get-all-products.controller";
+import { handleCreateProduct, handleGetAllProducts } from "../../controllers/products.controller";
 import InvalidMethodError from "../../errors/request/InvalidMethodError";
 import handleErrorResponse from "../../handlers/handleErrorResponse";
 

@@ -74,7 +74,6 @@ export default function hanleErrorResponse(func) {
       await Promise.resolve(func(req, res));
     } catch (error) {
       console.error(error);
-      console.log("ERROR!");
       respondError(res, error);
     }
   };
