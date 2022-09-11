@@ -27,6 +27,9 @@ export const handleCreateProduct: NextApiHandler = async (req, res) => {
       data: products,
     });
   } catch (err) {
+    if (err instanceof yup.ValidationError) {
+      throw new ParamError(err.path);
+    }
     throw err;
   }
 };
@@ -38,10 +41,17 @@ const HandlerQuerySchema = yup.object().shape({
 
 /** @type {import("next").NextApiHandler} */
 export const handleGetAllProducts: NextApiHandler = async (req, res) => {
-  const { limit, offset } = await HandlerQuerySchema.validate(req.query);
+  try {
+    const { limit, offset } = await HandlerQuerySchema.validate(req.query);
 
-  const products = await getAllProducts();
-  return res.status(200).json({
-    data: products,
-  });
+    const products = await getAllProducts();
+    return res.status(200).json({
+      data: products,
+    });
+  } catch (err) {
+    if (err instanceof yup.ValidationError) {
+      throw new ParamError(err.path);
+    }
+    throw err;
+  }
 };
