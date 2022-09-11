@@ -1,8 +1,7 @@
 import pool from "../../db/db";
 
 export default async function getAllProducts() {
-  const [rows, fields] = await pool.query("SELECT * FROM product");
-  console.log(rows);
+  const [rows, fields] = await pool.query("SELECT * FROM products");
   return rows;
   // return [
   //   {

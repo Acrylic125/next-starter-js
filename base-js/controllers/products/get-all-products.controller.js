@@ -8,7 +8,7 @@ const HandlerQuerySchema = yup.object().shape({
 });
 
 /** @type {import("next").NextApiHandler} */
-const handler = async (req, res) => {
+const handleGetAllProducts = async (req, res) => {
   const { limit, offset } = await HandlerQuerySchema.validate(req.query);
 
   const products = await getAllProducts();
@@ -17,4 +17,4 @@ const handler = async (req, res) => {
   });
 };
 
-export default handler;
+export default handleGetAllProducts;
