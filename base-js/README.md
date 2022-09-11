@@ -34,11 +34,15 @@ As mentioned above, this project is a bare bones shopping app to demonstrate how
 
 In Postman, go to or create a workspace.
 Next, go to `Environments`, set the following environment variables:
+
 ![Image of Postman Environment Variables](readme-assets\auth0-env.png)
+
 These values can be found in the Auth0 dashboard for the application.
 
 Go to `Collections`, and go to or create a collection.
+
 ![Image of Postman Authorization](readme-assets\collection-setup.png)
+
 Here, go the `Authorization` tab. Set the `Type` to `OAuth 2.0`.
 Then, select the environment of the collection to the environment you created in the previous step.
 
